@@ -1,12 +1,13 @@
 // User function Template for Java
 
 class Solution {
-    static int su(int arr[],int i){
+    static int sum(int arr[],int i){
         if(i>=arr.length) return 0;
-        return arr[i]+su(arr,i+1);
+        return arr[i]+sum(arr,i+1);
     }
     int arraySum(int arr[]) {
         // code here
-        return su(arr,0);
+        int s=sum(arr,0);
+        return s;
     }
 }
