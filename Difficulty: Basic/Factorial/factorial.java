@@ -1,7 +1,7 @@
 class Solution {
     static int factorial(int n) {
         // code here
-        if (n==0) return 1;
+        if(n==0) return 1;
         return n=n*factorial(n-1);
     }
 }
