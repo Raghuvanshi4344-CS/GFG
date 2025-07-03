@@ -1,18 +1,19 @@
 // User function Template for Java//User function Template for Java
 class Solution {
-    static void Re(int []arr,ArrayList<Integer>res,int i,int currentsum){
+    static void subset(int []arr,ArrayList <Integer>x,int i,int s){
         if(i==arr.length){
-            res.add(currentsum);
+            x.add(s);
             return;
         }
         //include
-        Re(arr,res,i+1,currentsum+arr[i]);
+        subset(arr,x,i+1,s+arr[i]);
         //exclude
-        Re(arr,res,i+1,currentsum);
+        subset(arr,x,i+1,s);
     }
     public ArrayList<Integer> subsetSums(int[] arr) {
-        ArrayList <Integer> a=new ArrayList<>();
-        Re(arr,a,0,0);
-        return a;
+        // code here
+        ArrayList<Integer> x=new ArrayList<>();
+        subset(arr,x,0,0);
+        return x;
     }
 }
